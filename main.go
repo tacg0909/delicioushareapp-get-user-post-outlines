@@ -20,7 +20,7 @@ type user struct {
 type userPostOutline struct {
     PostedTime string `json:"postedTime"`
     SmallImageUrl string `json:"smallImageUrl"`
-    Id string `json:"id"`
+    PostId string `json:"postId"`
 }
 
 func meshiteroGetUserPostOutlines(user user) ([]userPostOutline, error) {
