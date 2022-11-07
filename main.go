@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-    lambda.Start(meshiteroGetUserPostOutlines)
+    lambda.Start(delicioushareappGetUserPostOutlines)
 }
 
 type user struct {
@@ -23,7 +23,7 @@ type userPostOutline struct {
     PostId string `json:"postId"`
 }
 
-func meshiteroGetUserPostOutlines(user user) ([]userPostOutline, error) {
+func delicioushareappGetUserPostOutlines(user user) ([]userPostOutline, error) {
     db := dynamo.New(
         session.New(), 
         &aws.Config{
